@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="quiz.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz app</title>
+  </head>
+  <body class="correct font-sans">
+    <div class="container flex flex-col items-stretch shadow-lg" id="cardQuiz">
+      <div class="hide" id="question-container">
+        <div id="question" class="mx-6 font-semibold flex item-start">
+          <div class="question-number-div">
+            <span id="question-number" class="bg-slate-900"></span>
+          </div>
+
+          <p id="question-title"></p>
+        </div>
+        <div id="answer-buttons" class="btn-grid mx-6"></div>
+      </div>
+      <div id="result" class="flex justify-center items-center my-20 hide"></div>
+      <div
+        id="choose-type"
+        class="self-center basis-full grid grid-cols-1 gap-4 place-content-center h-48 hide"
+      ></div>
+      <div id="controls" class="controls flex items-stretch hide">
+        <button
+          id="next-btn"
+          class="flex items-center justify-end mr-6 bg-slate-900 next-btn btn hide mt-3 px-3"
+        >
+          <span class="mr-4">Következő</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 arrowBounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </button>
+        <div id="end-control" class="h-full end-buttons flex justify-center items-center space-x-4 hide">
+          <button id="retry-btn" class="rounded-full bg-slate-900 px-10 py-15 retry">
+            Újra
+          </button>
+          <button id="exit-btn" class="rounded-full bg-slate-900 px-7 py-15 exit">
+            Kilépés
+          </button>
+        </div>
+
+        <button
+          id="result-btn"
+          class="self-end bg-slate-900 basis-full result-btn btn hide"
+        >
+          Mutasd az eredményt
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
